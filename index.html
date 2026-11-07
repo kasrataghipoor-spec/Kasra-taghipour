@@ -55,7 +55,7 @@
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="#" aria-label="صفحه اصلی">K<span>.</span>T</a>
+      <a class="brand" href="#" aria-label="صفحه اصلی">کسری <span>تقی‌پور</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="باز و بسته کردن منو"><span aria-hidden="true">☰</span> فهرست</button>
       <nav id="main-nav" aria-label="ناوبری اصلی"><a href="#">خانه</a><a href="#about">درباره من</a><a href="#interests">علایق</a><a href="#projects">پروژه‌ها</a><a href="cyber.html">فضای سایبری</a><a href="internet-azad.html">اینترنت آزاد</a><a href="ariyan.html">آریان</a><a href="instagram.html">اینستاگرام</a><a href="#contact">ارتباط</a></nav>
     </header>
@@ -63,7 +63,7 @@
       <section class="hero">
         <div class="hero-copy">
           <div class="eyebrow"><span class="dot"></span> فضای دیجیتال من <span class="live-pill">● آنلاین و در حال ساخت</span></div>
-          <h1>ایده‌ها را<br><span>به تجربه تبدیل می‌کنم.</span></h1>
+          <h1>کسری تقی‌پور<br><span>وب‌سایت شخصی</span></h1>
           <p class="lead">سلام، من کسری تقی‌پور هستم؛ علاقه‌مند به برنامه‌نویسی، فناوری و ساخت پروژه‌های خلاقانه. اینجا مرکز دنیای دیجیتال و کارهای من است.</p>
           <div class="actions"><a class="btn primary" href="#featured">کاوش در سایت <span>←</span></a><a class="btn" href="https://github.com/kasrataghipoor-spec" target="_blank" rel="noopener noreferrer">گیت‌هاب من ↗</a></div>
           <div class="hero-meta"><span>✦ یادگیری مداوم</span><span>⌘ ساخت پروژه</span><span>◈ کشف فناوری</span></div>
@@ -129,7 +129,11 @@
       menuButton.setAttribute("aria-expanded", String(!isOpen));
       mainNav.classList.toggle("open", !isOpen);
     });
-    document.querySelectorAll("main section, .quick-stats").forEach(el => el.classList.add("reveal"));\n    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); } }), {threshold:0.12});\n    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));\n    document.querySelector("#year").textContent = new Date().getFullYear();\n    mainNav.addEventListener("click", event => {
+    document.querySelectorAll("main section, .quick-stats").forEach(el => el.classList.add("reveal"));
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); } }), {threshold:0.12});
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    mainNav.addEventListener("click", event => {
       if (event.target.closest("a")) {
         mainNav.classList.remove("open");
         menuButton.setAttribute("aria-expanded", "false");
