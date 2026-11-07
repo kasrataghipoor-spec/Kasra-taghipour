@@ -26,21 +26,22 @@
     :root{color-scheme:dark;--bg:#071426;--panel:#102746;--text:#f4f8ff;--muted:#b8cbe5;--line:#2d4d75;--accent:#79b9ff;--mint:#75e6d6}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#31569b 0,transparent 43%),radial-gradient(ellipse at 92% 32%,#126078 0,transparent 35%),linear-gradient(160deg,#071426,#0a1830 60%,#071426);color:var(--text);font-family:Vazirmatn, Tahoma, sans-serif;line-height:1.9}
     a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;margin-top:14px;border:1px solid #ffffff18;border-radius:18px;background:#0d1d34bb;backdrop-filter:blur(14px);box-shadow:0 12px 40px #0002}.brand{font-weight:800;letter-spacing:-.5px}.brand span{color:var(--mint)}nav{display:flex;gap:24px;color:var(--muted);font-size:14px}nav a:hover,.text-link:hover{color:var(--mint)}
+    header{position:sticky;top:12px;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:12px 16px;margin-top:14px;border:1px solid #ffffff20;border-radius:20px;background:#0b1b31ef;backdrop-filter:blur(18px);box-shadow:0 14px 42px #0004}.brand{font-weight:800;letter-spacing:-.5px;font-size:20px;white-space:nowrap}.brand span{color:var(--mint)}nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:5px;color:var(--muted);font-size:13px}nav a{padding:8px 11px;border-radius:11px;transition:background .2s,color .2s}nav a:hover,nav a:focus-visible{color:var(--mint);background:#75e6d615;outline:none}.menu-toggle{display:none;border:1px solid #ffffff26;background:#142c4a;color:var(--text);border-radius:12px;padding:8px 12px;font:inherit;font-size:13px;cursor:pointer}.text-link:hover{color:var(--mint)}
     .hero{min-height:66vh;display:grid;align-content:center;padding:70px 38px 90px;max-width:900px;margin-top:20px;border:1px solid #ffffff18;border-radius:30px;background:linear-gradient(125deg,#102b4ddd,#10233bc9);box-shadow:0 24px 70px #0003;position:relative;overflow:hidden}.hero:after{content:"KT";position:absolute;left:28px;bottom:-55px;font-size:220px;font-weight:800;color:#ffffff08;direction:ltr;pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--mint);font-size:14px;font-weight:600}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 18px var(--mint)}
     h1{font-size:clamp(42px,8vw,76px);line-height:1.25;letter-spacing:-2px;margin:20px 0 12px}h1 span{background:linear-gradient(90deg,var(--mint),#a5b4fc);background-clip:text;color:transparent}.lead{font-size:clamp(17px,2.5vw,20px);color:var(--muted);max-width:680px;margin:0}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:11px 20px;border:1px solid #46648b;border-radius:13px;font-weight:700;background:#142c4a}.btn.primary{background:linear-gradient(100deg,#7de2d4,#83b9ff);color:#071426;border-color:transparent}.btn:hover{transform:translateY(-2px);transition:.2s}
     section{padding:34px 0 58px}.section-title{font-size:25px;margin:0 0 18px}.about{max-width:740px;color:var(--muted)}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(145deg,#19385eee,#10223bee);border:1px solid #41618a;border-radius:20px;padding:22px;box-shadow:0 12px 32px #0002;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-5px);border-color:var(--mint)}.card h3{margin:0 0 7px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}.taglist{display:flex;flex-wrap:wrap;gap:10px}.tag{padding:7px 13px;border-radius:10px;background:#142b4c;border:1px solid #365783;color:#dbe5ff;font-size:14px}
     footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    @media(max-width:700px){nav{gap:13px;font-size:12px}.grid{grid-template-columns:1fr}.hero{min-height:58vh;padding:45px 22px}header{align-items:flex-start}.hero:after{font-size:150px;left:8px;bottom:-35px}}
+    @media(max-width:760px){header{top:8px;flex-wrap:wrap;padding:11px 13px}.menu-toggle{display:inline-flex;align-items:center;gap:8px}nav{display:none;order:3;width:100%;padding-top:9px;border-top:1px solid #ffffff18;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}nav.open{display:grid}nav a{background:#ffffff08;padding:9px 11px}.grid{grid-template-columns:1fr}.hero{min-height:58vh;padding:45px 22px}.hero:after{font-size:150px;left:8px;bottom:-35px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <a class="brand" href="#" aria-label="صفحه اصلی">K<span>.</span>T</a>
-      <nav aria-label="ناوبری اصلی"><a href="#about">درباره من</a><a href="#interests">علایق</a><a href="#projects">پروژه‌ها</a><a href="cyber.html">فضای سایبری</a><a href="internet-azad.html">اینترنت آزاد</a><a href="ariyan.html">آریان</a><a href="instagram.html">اینستاگرام</a><a href="#contact">ارتباط</a></nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="باز و بسته کردن منو"><span aria-hidden="true">☰</span> فهرست</button>
+      <nav id="main-nav" aria-label="ناوبری اصلی"><a href="#">خانه</a><a href="#about">درباره من</a><a href="#interests">علایق</a><a href="#projects">پروژه‌ها</a><a href="cyber.html">فضای سایبری</a><a href="internet-azad.html">اینترنت آزاد</a><a href="ariyan.html">آریان</a><a href="instagram.html">اینستاگرام</a><a href="#contact">ارتباط</a></nav>
     </header>
     <main>
       <section class="hero">
@@ -90,5 +91,20 @@
     </main>
     <footer><span>© <span id="year">2026</span> Kasra Taghipour</span><span>ساخته‌شده با علاقه به یادگیری و فناوری</span></footer>
   </div>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector("#main-nav");
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      mainNav.classList.toggle("open", !isOpen);
+    });
+    mainNav.addEventListener("click", event => {
+      if (event.target.closest("a")) {
+        mainNav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
 </body>
 </html>
