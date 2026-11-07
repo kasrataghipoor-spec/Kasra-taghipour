@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kasrataghipoor-spec.github.io/Kasra-taghipour/sitemap.xml
